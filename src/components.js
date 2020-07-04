@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import React from "react"
+import styled from 'styled-components'
+import React from 'react'
 
 // table styling
 // https://codepen.io/Lars1702/pen/PoZKNbz
@@ -7,6 +7,8 @@ import React from "react"
 export const AppContainer = styled.div`
   background: #293241;
   min-height: 100vh;
+  min-width: 100vw;
+  width: 100%;
   height: 100%;
 `
 

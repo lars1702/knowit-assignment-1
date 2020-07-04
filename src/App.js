@@ -1,9 +1,10 @@
 //tolkning i oppgaven: tabell tolker jeg spesifikt som html-elementet "table". I motsetning til å feks bruke "div"
 
-import React, { useState, useEffect, useMemo } from "react"
-import { Table, HeaderRow, BodyRow, AppContainer } from "./components"
-import Buttons from "./Buttons"
-import usePaginator from "./usePaginator"
+import React, { useState, useEffect, useMemo } from 'react'
+import { Table, HeaderRow, BodyRow, AppContainer } from './components'
+import Buttons from './Buttons'
+import usePaginator from './usePaginator'
+
 function KnowitApp() {
   const [rawResults, setRawResults] = useState([])
   const [totalPages, setTotalPages] = useState(0)
@@ -12,7 +13,7 @@ function KnowitApp() {
   //call api once
   useEffect(() => {
     fetch(
-      "https://api.github.com/search/repositories?q=language:javascript&sort=stars&order=desc&per_page=100"
+      'https://api.github.com/search/repositories?q=language:javascript&sort=stars&order=desc&per_page=100',
     )
       .then((data) => data.json())
       .then((res) => {
@@ -27,7 +28,7 @@ function KnowitApp() {
   }, [rawResults, page])
 
   return !pageResults.length ? (
-    "loading"
+    'loading'
   ) : (
     <AppContainer>
       <Buttons page setPage={setPage} totalPages={totalPages} />
