@@ -35,7 +35,6 @@ export const Table = styled.table`
   border-spacing: 0;
   margin: 0 auto;
   margin: 5px;
-
   thead {
     background-color: #3d5a80;
     color: white;
