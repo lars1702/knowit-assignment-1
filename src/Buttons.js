@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import React from 'react'
+import styled from "styled-components"
+import React from "react"
 
-const buttonSize = '40px'
+const buttonSize = "40px"
 const Button = styled.button`
   border: none;
   cursor: pointer;
@@ -17,7 +17,7 @@ const Button = styled.button`
   &:hover {
     ::before {
       border-radius: ${buttonSize};
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       right: 0;
@@ -32,17 +32,17 @@ const ButtonContainer = styled.div`
   display: flex;
 `
 const Buttons = ({ curPage, totalPages, setPage }) => {
-  console.log('DEBUG - totalPages:', totalPages)
-  const pagesArray = new Array(totalPages).fill('')
+  console.log("DEBUG - totalPages:", totalPages)
+  const pagesArray = new Array(totalPages).fill("")
   return (
     <ButtonContainer>
-      <Button onClick={() => setPage('-')}>Prev Page</Button>
+      <Button onClick={() => setPage("-")}>Prev</Button>
       {pagesArray.map((e, index) => (
-        <Button key={'button' + index} onClick={() => setPage(index)}>
+        <Button key={"button" + index} onClick={() => setPage(index)}>
           {index + 1}
         </Button>
       ))}
-      <Button onClick={() => setPage('+')}>Next page</Button>
+      <Button onClick={() => setPage("+")}>Next</Button>
     </ButtonContainer>
   )
 }
